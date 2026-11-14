@@ -1,0 +1,1 @@
+// utilises GSAP pour fluidifier les mouvements

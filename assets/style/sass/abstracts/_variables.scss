@@ -1,0 +1,25 @@
+// Colors
+$color-white: #fff;
+$color-black: #000;
+
+// Typo
+$primary-font: "Flexas", sans-serif;
+$size-title: 1.5rem;
+$size-content: 1rem;
+
+// Spacings
+$spacer: 1rem;
+$spacer-sm: 0.5rem;
+$spacer-lg: 2rem;
+
+// Border Radius
+$border-radius: 0.5rem;
+$border-radius-lg: 0.75rem;
+$border-radius-full: 9999px;
+
+// breakpoints
+$breakpoints: (
+  lg: 1024px,
+  md: 768px,
+  sm: 576px,
+);
