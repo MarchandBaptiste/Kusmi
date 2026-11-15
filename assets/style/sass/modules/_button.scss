@@ -1,0 +1,11 @@
+@use "../abstracts/index" as v;
+
+.button{
+    width: 100%;
+    border: none;
+    padding: v.$spacer;
+    background-color: v.$color-yellow;
+    color: v.$color-darck-green;
+    font-family: v.$secondary-font;
+    border-radius: 30px;
+}

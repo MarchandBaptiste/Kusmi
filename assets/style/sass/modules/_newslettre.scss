@@ -1,0 +1,46 @@
+@use "../abstracts/index" as v;
+@use "../mixins/index" as m;
+
+.newsletter {
+  color: v.$color-white;
+  font-family: v.$secondary-font;
+  &__title {
+    font-family: v.$primary-font;
+    font-size: v.$size-title;
+    font-weight: 100;
+    margin-bottom: -1rem;
+  }
+  &__label {
+    display: none;
+  }
+  &__fieldset {
+    @include m.flex(
+      $direction: column,
+      $justify: center,
+      $align: center,
+      $gap: v.$spacer
+      );
+      padding: v.$spacer-lg;
+      border: none;
+  }
+  &__legend{
+      padding: 0 v.$spacer-lg;
+      text-align: center;
+  }
+  &__input{
+    border: 2px solid v.$color-white;
+    border-radius: 8px;
+    padding: v.$spacer;
+    background: none;
+    width: 100%;
+    color: v.$color-white;
+  }
+  &__input:focus{
+    outline: none;
+    box-shadow: 0 0 0 5px rgba($color: v.$color-white, $alpha: 0.08);
+  }
+  &__legal{
+    font-size: smaller;
+    margin-top: -3.5rem;
+  }
+}
