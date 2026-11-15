@@ -59,24 +59,27 @@
         </table>
       </section>
 
-      <section id="contact">
-        <h2>Contactez-nous</h2>
-        <form method="post" action="">
-          <fieldset>
-            <legend>Votre message</legend>
-
-            <label for="nom">Votre nom *</label>
-            <input type="text" id="nom" name="nom" required />
-
-            <label for="email">Votre email *</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="message">Votre message *</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Envoyer</button>
+      <section class="newsletter l-newsletter">
+        <h2 class="newsletter__title">Rejoignez-nous</h2>
+        <form class="newsletter__form" method="post" action="">
+          <fieldset class="newsletter__fieldset">
+            <legend class="newsletter__legend">
+              Rejoignez la communauté et soyez les premiers au courant de nos
+              actualités !
+            </legend>
+            <label class="newsletter__label" for="email">Votre email</label>
+            <input
+              class="newsletter__input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Votre adresse mail"
+              required
+            />
+            <button class="button newsletter__button" type="submit">Envoyer</button>
           </fieldset>
         </form>
+        <p class="newsletter__legal">En vous inscrivant vous acceptez notre politique de confidentialité</p>
       </section>
     </main>
 

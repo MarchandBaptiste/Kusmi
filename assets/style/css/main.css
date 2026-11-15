@@ -24,6 +24,69 @@ body {
   background-color: #1e2922;
 }
 
+.button {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  background-color: #f5c144;
+  color: #1e2922;
+  font-family: "Felxas", sans-serif;
+  border-radius: 30px;
+}
+
+.newsletter {
+  color: #fffcf4;
+  font-family: "Felxas", sans-serif;
+}
+.newsletter__title {
+  font-family: "Flexas", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-bottom: -1rem;
+}
+.newsletter__label {
+  display: none;
+}
+.newsletter__fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 2rem;
+  border: none;
+}
+.newsletter__legend {
+  padding: 0 2rem;
+  text-align: center;
+}
+.newsletter__input {
+  border: 2px solid #fffcf4;
+  border-radius: 8px;
+  padding: 1rem;
+  background: none;
+  width: 100%;
+  color: #fffcf4;
+}
+.newsletter__input:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(255, 252, 244, 0.08);
+}
+.newsletter__legal {
+  font-size: smaller;
+  margin-top: -3.5rem;
+}
+
+.l-newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
 .l-footer {
   padding-top: 5rem;
   position: relative;
