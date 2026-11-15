@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "flavor": "Agrumes",
+    "images": [
+      "./assets/imgs/agrume1.webp",
+      "./assets/imgs/agrume2.webp",
+      "./assets/imgs/agrume3.webp",
+      "./assets/imgs/agrume4.webp",
+      "./assets/imgs/agrume5.webp",
+      "./assets/imgs/agrume6.webp"
+    ],
+    "description": "Un mélange pétillant de citron vert, d'orange et de pamplemousse, avec une pointe de citron amer qui donne du caractère.",
+    "theme": "Agrumes"
+  },
+  {
+    "id": 2,
+    "flavor": "Fleuries",
+    "images": [
+      "./assets/imgs/fleurie1.webp",
+      "./assets/imgs/fleurie2.webp",
+      "./assets/imgs/fleurie3.webp",
+      "./assets/imgs/fleurie4.webp",
+      "./assets/imgs/fleurie5.webp",
+      "./assets/imgs/fleurie6.webp"
+    ],
+    "description": "Un mélange envoûtant de jasmin et de fleur d'oranger, avec une pointe de douceur miellée qui apporte de l'élégance.",
+    "theme": "Fleuries"
+  },
+  {
+    "id": 3,
+    "flavor": "Sucrées",
+    "images": [
+      "./assets/imgs/sucre1.webp",
+      "./assets/imgs/sucre2.webp",
+      "./assets/imgs/sucre3.webp",
+      "./assets/imgs/sucre4.webp",
+      "./assets/imgs/sucre5.webp",
+      "./assets/imgs/sucre6.webp"
+    ],
+    "description": "Un mélange envoûtant de vanille et de caramel, avec une pointe de chaleur sucrée qui apporte de la gourmandise.",
+    "theme": "Sucrees"
+  }
+]
