@@ -1,0 +1,96 @@
+@use "../abstracts/index" as v;
+@use "../mixins/index" as m;
+
+.l-footer {
+  padding-top: 5rem;
+  position: relative;
+  background-image: url("../../icons/fondFooter.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  color: v.$color-darck-green;
+}
+
+$icons: (
+  "instagram": "../../icons/instagram.svg",
+  "tiktok": "../../icons/tiktok.svg",
+);
+
+.footer {
+  &__content {
+    @include m.flex(
+      $direction: column,
+      $justify: space-between,
+      $align: center,
+      $gap: 2rem
+    );
+    padding: 2rem;
+  }
+  &__logo {
+    height: 100px;
+    width: auto;
+  }
+  &__column {
+    @include m.flex(
+      $direction: column,
+      $justify: start,
+      $align: start,
+      $gap: v.$spacer
+    );
+  }
+  &__row {
+    @include m.flex($justify: center, $align: start, $gap: v.$spacer-lg);
+  }
+  &__title {
+    font-family: v.$primary-font;
+    font-weight: 100;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    color: v.$color-white;
+    font-family: v.$secondary-font;
+    font-size: v.$size-content;
+    padding-bottom: v.$spacer-sm;
+  }
+  &__item:hover {
+    scale: 1.05;
+    color: v.$color-darck-green;
+  }
+  &__list--social {
+    @include m.flex(
+      $direction: row,
+      $justify: center,
+      $align: flex-start,
+      $gap: 2rem
+    );
+    .footer__item {
+      padding-bottom: 0;
+    }
+  }
+  &__icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: v.$color-white;
+    mask: no-repeat center / contain;
+    -webkit-mask: no-repeat center / contain;
+    transition:
+      transform 0.2s,
+      background-color 0.2s;
+
+    @each $name, $path in $icons {
+      &--#{$name} {
+        mask-image: url($path);
+        -webkit-mask-image: url($path);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: v.$color-darck-green;
+      transform: scale(1.1);
+    }
+  }
+}

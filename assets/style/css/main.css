@@ -15,4 +15,103 @@ h1 {
   font-family: Flexas;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: #1e2922;
+}
+
+.l-footer {
+  padding-top: 5rem;
+  position: relative;
+  background-image: url("../../icons/fondFooter.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  color: #1e2922;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+.footer__logo {
+  height: 100px;
+  width: auto;
+}
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.footer__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+.footer__title {
+  font-family: "Flexas", sans-serif;
+  font-weight: 100;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__item {
+  color: #fffcf4;
+  font-family: "Felxas", sans-serif;
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+}
+.footer__item:hover {
+  scale: 1.05;
+  color: #1e2922;
+}
+.footer__list--social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+.footer__list--social .footer__item {
+  padding-bottom: 0;
+}
+.footer__icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: #fffcf4;
+  mask: no-repeat center/contain;
+  -webkit-mask: no-repeat center/contain;
+  transition: transform 0.2s, background-color 0.2s;
+}
+.footer__icon--instagram {
+  mask-image: url("../../icons/instagram.svg");
+  -webkit-mask-image: url("../../icons/instagram.svg");
+}
+.footer__icon--tiktok {
+  mask-image: url("../../icons/tiktok.svg");
+  -webkit-mask-image: url("../../icons/tiktok.svg");
+}
+.footer__icon:hover {
+  cursor: pointer;
+  background-color: #1e2922;
+  transform: scale(1.1);
+}
+
 /*# sourceMappingURL=main.css.map */
