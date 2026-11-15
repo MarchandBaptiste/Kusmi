@@ -15,7 +15,10 @@ Ce site donne vie à la conception 2D à travers un rendu 3D, mettant en scène 
 
 * **Déclinaisons :** Variantes fleuries (jasmin, fleur d'oranger), épicées (gingembre, poivre) et sucrées (vanille, caramel).
 
+## Maquette Figma
 
+La conception UI/UX du projet est disponible en ligne :
+[Consulter la maquette Figma du projet Kusmi](https://www.figma.com/design/dOEZSn5lkMSoGduGhgRNIw/Kusmi?node-id=0-1&t=2s9Mxkv5w2OzEbyG-1)
 
 ## Stack Technique
 
