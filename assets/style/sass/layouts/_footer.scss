@@ -2,7 +2,7 @@
 @use "../mixins/index" as m;
 
 .l-footer {
-  padding-top: v.$spacer-lg;
+  padding-top: 5rem;
   position: relative;
   background-image: url("../../icons/fondFooter.svg");
   background-repeat: no-repeat;
