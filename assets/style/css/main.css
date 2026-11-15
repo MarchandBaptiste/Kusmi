@@ -20,6 +20,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: #1e2922;
+}
+
 .l-footer {
   padding-top: 2rem;
   position: relative;
