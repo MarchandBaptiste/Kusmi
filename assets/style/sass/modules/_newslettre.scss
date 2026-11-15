@@ -24,7 +24,6 @@
       border: none;
   }
   &__legend{
-      padding: 0 v.$spacer-lg;
       text-align: center;
   }
   &__input{
@@ -42,5 +41,7 @@
   &__legal{
     font-size: smaller;
     margin-top: -3.5rem;
+    padding: 0 v.$spacer-lg;
+    text-align: center;
   }
 }
