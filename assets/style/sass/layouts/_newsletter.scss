@@ -1,0 +1,11 @@
+@use "../abstracts/index" as v;
+@use "../mixins/index" as m;
+
+.l-newsletter {
+  @include m.flex(
+    $direction: column,
+    $justify: center,
+    $align: center,
+    $gap: v.$spacer-lg
+  );
+}
