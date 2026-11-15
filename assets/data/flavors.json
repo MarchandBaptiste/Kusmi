@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "flavor": "Agrumes",
+    "images": ["./assets/img/"],
+    "description": "Un mélange pétillant de citron vert, d'orange et de pamplemousse, avec une pointe de citron amer qui donne du caractère.",
+    "theme": "Agrumes"
+  },
+  {
+    "id": 2,
+    "flavor": "Fleuries",
+    "images": ["./assets/img/"],
+    "description": "Un mélange envoûtant de jasmin et de fleur d'oranger, avec une pointe de douceur miellée qui apporte de l'élégance.",
+    "theme": "Fleuries"
+  },
+  {
+    "id": 3,
+    "flavor": "Sucrées",
+    "images": ["./assets/img/"],
+    "description": "Un mélange envoûtant de vanille et de caramel, avec une pointe de chaleur sucrée qui apporte de la gourmandise.",
+    "theme": "Sucrées"
+  }
+]
