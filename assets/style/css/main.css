@@ -179,7 +179,7 @@ body {
 .footer__icon:hover {
   cursor: pointer;
   background-color: #1e2922;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=main.css.map */
