@@ -62,7 +62,6 @@ body {
   border: none;
 }
 .newsletter__legend {
-  padding: 0 2rem;
   text-align: center;
 }
 .newsletter__input {
@@ -80,6 +79,8 @@ body {
 .newsletter__legal {
   font-size: smaller;
   margin-top: -3.5rem;
+  padding: 0 2rem;
+  text-align: center;
 }
 
 .l-newsletter {
