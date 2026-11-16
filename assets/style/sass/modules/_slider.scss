@@ -1,0 +1,75 @@
+@use "../abstracts/index" as v;
+@use "../mixins/index" as m;
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: v.$spacer-lg 0 v.$spacer-lg v.$spacer-lg;
+  overflow-x: hidden;
+
+  &__container {
+    padding: v.$spacer-sm;
+    display: flex;
+    align-items: center;
+    gap: v.$spacer;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    max-width: 100%;
+    scrollbar-width: none;
+  }
+
+  &__img {
+    min-width: auto;
+    flex-shrink: 0;
+    width: 60%;
+    aspect-ratio: 7/9;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: v.$border-radius-lg;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+    @include m.respond-to("lg") {
+      width: 300px;
+      height: 100%;
+    }
+  }
+
+  &__img:hover {
+    transform: scale(1.03);
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.212);
+    color: v.$color-white;
+    border: none;
+    font-size: v.$spacer-lg;
+    padding: 0.3rem v.$spacer;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+    border-radius: v.$border-radius-full;
+  }
+
+  &__btn:hover {
+    background-color: rgba(0, 0, 0, 0.37);
+  }
+
+  &__btn--prev {
+    left: 0;
+  }
+
+  &__btn--next {
+    right: 0;
+  }
+
+  @media (min-width: 1024px) {
+    &__btn {
+      display: block;
+    }
+  }
+}
