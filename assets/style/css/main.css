@@ -190,11 +190,22 @@ body.sucrees .button {
 .l-footer {
   padding-top: 5rem;
   position: relative;
-  background-image: url("../../icons/fondFooter.svg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   color: #1e2922;
+}
+
+body.agrumes .l-footer {
+  background-image: url("../../icons/agrumeFooter.svg");
+}
+
+body.fleuries .l-footer {
+  background-image: url("../../icons/fleurieFooter.svg");
+}
+
+body.sucrees .l-footer {
+  background-image: url("../../icons/sucreeFooter.svg");
 }
 
 .footer__content {

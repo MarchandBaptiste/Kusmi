@@ -4,18 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const flavorURL = "./assets/data/flavors.json";
   const body = document.querySelector("body");
   const container = document.getElementById("slider__container");
+  const footer = document.querySelector(".l-footer");
   const btnPrev = document.querySelector(".slider__btn--prev");
   const btnNext = document.querySelector(".slider__btn--next");
   const scrollStep = 240; // largeur image + gap + marge
   const links = document.querySelectorAll("[data-flavor]");
   let flavorsData = [];
-  const modelPaths = {
-    agrumes: "./assets/models/originalglb.glb",
-    fleuries: "./assets/models/fleurie.glb",
-    sucrees: "./assets/models/sucre.glb",
-  };
 
-  // Render slider
+  // Render slider pour une saveur donnée
   function renderImgSlider(flavorName) {
     container.innerHTML = "";
 
@@ -23,13 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML = `<p class="empty-message">Aucune donnée chargée.</p>`;
       return;
     }
+
     const flavor = flavorsData.find((item) => item.theme === flavorName);
+
     if (!flavor) {
       console.warn(`Le goût "${flavorName}" est introuvable dans flavorsData.`);
       return;
     }
 
-    // Afficher images saveur
     flavor.images.forEach((imgSrc) => {
       const img = document.createElement("img");
       img.src = imgSrc;
@@ -40,23 +37,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Changer couleur sur le body
+  // Changer la classe de couleur sur le body
   function changerFlavor(flavor) {
     body.classList.remove("agrumes", "fleuries", "sucrees");
     body.classList.add(flavor);
   }
 
-  // Changement de goût
+  // Changer le fond SVG du footer
+  function changerFooterBg(bgUrl) {
+    if (footer) {
+      footer.style.backgroundImage = `url("${bgUrl}")`;
+    }
+  }
+
+  // Changement de goût au clic
   links.forEach((link) => {
     link.addEventListener("click", (e) => {
-      e.preventDefault(); // empêche le rechargement de la page
+      e.preventDefault();
       const flavor = link.getAttribute("data-flavor");
       console.log("Goût sélectionné :", flavor);
+      const flavorObj = flavorsData.find((item) => item.theme === flavor);
+      if (!flavorObj) {
+        console.warn(`Le goût "${flavor}" est introuvable.`);
+        return;
+      }
+
+      // 1. Couleur du body
       changerFlavor(flavor);
+
+      // 2. Images du slider
       renderImgSlider(flavor);
-      const cheminModele = modelPaths[flavor];
-      if (cheminModele) {
-        chargerModeleGLB(cheminModele);
+
+      // 3. Modèle 3D
+      if (flavorObj.modelPaths) {
+        chargerModeleGLB(flavorObj.modelPaths);
+      }
+
+      // 4. Fond SVG du footer
+      if (flavorObj.footerBg) {
+        changerFooterBg(flavorObj.footerBg);
       }
     });
   });
@@ -69,11 +88,20 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((data) => {
       flavorsData = data;
+
+      // Initialisation par défaut : Agrumes
       body.classList.add("agrumes");
-      renderImgSlider("agrumes");
-      const cheminModele = modelPaths["agrumes"];
-      if (cheminModele) {
-        chargerModeleGLB(cheminModele);
+      const defaultFlavor = flavorsData.find(
+        (item) => item.theme === "agrumes",
+      );
+      if (defaultFlavor) {
+        renderImgSlider("agrumes");
+        if (defaultFlavor.modelPaths) {
+          chargerModeleGLB(defaultFlavor.modelPaths);
+        }
+        if (defaultFlavor.footerBg) {
+          changerFooterBg(defaultFlavor.footerBg);
+        }
       }
     })
     .catch((err) => {
@@ -81,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML = `<p class="empty-message">Impossible de charger les images.</p>`;
     });
 
-  // Boutons carrousel
+  // Boutons carrousel desktop
   btnPrev.addEventListener("click", () => {
     container.scrollBy({ left: -scrollStep, behavior: "smooth" });
   });
