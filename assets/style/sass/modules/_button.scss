@@ -1,13 +1,20 @@
+@use "sass:map";
 @use "../abstracts/index" as v;
 
 .button {
   width: 100%;
   border: none;
   padding: v.$spacer;
-  background-color: v.$color-yellow;
   color: v.$color-darck-green;
   font-family: v.$secondary-font;
   border-radius: 30px;
+  cursor: pointer;
+}
+
+@each $name, $theme in v.$themes {
+  body.#{$name} .button {
+    background-color: map.get($theme, "couleur-accent");
+  }
 }
 .button:hover {
   cursor: pointer;
