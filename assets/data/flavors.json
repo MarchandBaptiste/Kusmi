@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "flavor": "Agrumes",
+    "flavor": "agrumes",
     "images": [
       "./assets/imgs/agrume1.webp",
       "./assets/imgs/agrume3.webp",
@@ -25,7 +25,7 @@
       "./assets/imgs/fleurie6.webp"
     ],
     "description": "Un mélange envoûtant de jasmin et de fleur d'oranger, avec une pointe de douceur miellée qui apporte de l'élégance.",
-    "theme": "Fleuries"
+    "theme": "fleuries"
   },
   {
     "id": 3,
@@ -39,6 +39,6 @@
       "./assets/imgs/sucre6.webp"
     ],
     "description": "Un mélange envoûtant de vanille et de caramel, avec une pointe de chaleur sucrée qui apporte de la gourmandise.",
-    "theme": "Sucrees"
+    "theme": "agrumes"
   }
 ]
