@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "flavor": "agrumes",
+    "flavor": "Agrumes",
     "images": [
       "./assets/imgs/agrume1.webp",
       "./assets/imgs/agrume3.webp",
@@ -11,7 +11,7 @@
       "./assets/imgs/agrume6.webp"
     ],
     "description": "Un mélange pétillant de citron vert, d'orange et de pamplemousse, avec une pointe de citron amer qui donne du caractère.",
-    "theme": "Agrumes"
+    "theme": "agrumes"
   },
   {
     "id": 2,
@@ -39,6 +39,6 @@
       "./assets/imgs/sucre6.webp"
     ],
     "description": "Un mélange envoûtant de vanille et de caramel, avec une pointe de chaleur sucrée qui apporte de la gourmandise.",
-    "theme": "agrumes"
+    "theme": "sucrees"
   }
 ]

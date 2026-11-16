@@ -1,50 +1,63 @@
+import { chargerModeleGLB } from "./scene3d.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const flavorURL = "./assets/data/flavors.json";
   const body = document.querySelector("body");
   const container = document.getElementById("slider__container");
   const btnPrev = document.querySelector(".slider__btn--prev");
   const btnNext = document.querySelector(".slider__btn--next");
-  const scrollStep = 240; // largeur image (200px) + gap (20px) + marge
+  const scrollStep = 240; // largeur image + gap + marge
   const links = document.querySelectorAll("[data-flavor]");
   let flavorsData = [];
+  const modelPaths = {
+    agrumes: "./assets/models/originalglb.glb",
+    fleuries: "./assets/models/fleurie.glb",
+    sucrees: "./assets/models/sucre.glb",
+  };
 
   // Render slider
-  function renderImgSlider(list) {
-    const flavor = flavorsData.find((item) => item.flavor === list);
+  function renderImgSlider(flavorName) {
     container.innerHTML = "";
-    if (goutTrouve) {
-      if (!list || list.length === 0) {
-        container.innerHTML = `<p class="empty-message">Aucune images à afficher.</p>`;
-        return;
-      }
-    } else {
-      console.warn(`Le goût "${choix}" est introuvable dans flavorsData.`);
+
+    if (!flavorsData || flavorsData.length === 0) {
+      container.innerHTML = `<p class="empty-message">Aucune donnée chargée.</p>`;
+      return;
+    }
+    const flavor = flavorsData.find((item) => item.theme === flavorName);
+    if (!flavor) {
+      console.warn(`Le goût "${flavorName}" est introuvable dans flavorsData.`);
+      return;
     }
 
-    list.forEach((flavor) => {
-      flavor.images.forEach((imgSrc) => {
-        const img = document.createElement("img");
-        img.src = imgSrc;
-        img.alt = flavor.flavor;
-        img.classList.add("slider__img");
-        img.loading = "lazy";
-        container.appendChild(img);
-      });
+    // Afficher images saveur
+    flavor.images.forEach((imgSrc) => {
+      const img = document.createElement("img");
+      img.src = imgSrc;
+      img.alt = flavor.flavor;
+      img.classList.add("slider__img");
+      img.loading = "lazy";
+      container.appendChild(img);
     });
   }
+
+  // Changer couleur sur le body
   function changerFlavor(flavor) {
-    body.classList.remove(agrumes, fleuries, sucrees);
+    body.classList.remove("agrumes", "fleuries", "sucrees");
     body.classList.add(flavor);
   }
 
-  // Changement de gout
+  // Changement de goût
   links.forEach((link) => {
     link.addEventListener("click", (e) => {
-      e.preventDefault(); // empeche le rechargement
+      e.preventDefault(); // empêche le rechargement de la page
       const flavor = link.getAttribute("data-flavor");
       console.log("Goût sélectionné :", flavor);
       changerFlavor(flavor);
       renderImgSlider(flavor);
+      const cheminModele = modelPaths[flavor];
+      if (cheminModele) {
+        chargerModeleGLB(cheminModele);
+      }
     });
   });
 
@@ -62,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML = `<p class="empty-message">Impossible de charger les images.</p>`;
     });
 
-  // Boutons carrousel desktop
+  // Boutons carrousel
   btnPrev.addEventListener("click", () => {
     container.scrollBy({ left: -scrollStep, behavior: "smooth" });
   });
