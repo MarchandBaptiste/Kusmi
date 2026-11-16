@@ -21,10 +21,11 @@ body {
 }
 
 ::selection {
-  @each $name, $theme in v.$themes {
-    &--#{$name} {
-      background: map.get($theme, couleur-accent);
-    }
-  }
   color: v.$color-white;
+}
+
+@each $name, $theme in v.$themes {
+  body.#{$name}::selection {
+    background: map.get($theme, couleur-accent);
+  }
 }

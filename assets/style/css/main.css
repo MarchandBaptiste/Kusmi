@@ -24,17 +24,20 @@ body {
   background-color: #1e2922;
 }
 
-::selection--agrumes {
-  background: #F5C144;
-}
-::selection--fleuries {
-  background: #99B98A;
-}
-::selection--sucrees {
-  background: #BEA580;
-}
 ::selection {
   color: #fffcf4;
+}
+
+body.agrumes::selection {
+  background: #F5C144;
+}
+
+body.fleuries::selection {
+  background: #99B98A;
+}
+
+body.sucrees::selection {
+  background: #BEA580;
 }
 
 .button {
