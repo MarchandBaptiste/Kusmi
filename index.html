@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/style/css/main.css" />
     <link rel="icon" type="image/png" href="./assets/icons/logo.png" />
     <script type="module" src="./assets/js/main.js"></script>
+    <script src="./assets/js/animations.js"></script>
     <meta
       name="description"
       content="Rafraîchissez-vous avec le nouveau soda Kusmi. Un mélange pétillant unique de citron vert, orange, pamplemousse et plantes pour une pause stimulante."
@@ -41,22 +42,8 @@
         <p>Contenu de la section.</p>
       </section>
 
-      <section id="section3">
-        <h2>Lien 3</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Colonne 1</th>
-              <th>Colonne 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Donnée 1</td>
-              <td>Donnée 2</td>
-            </tr>
-          </tbody>
-        </table>
+      <section class="slider l-slider">
+        <div id="slider__container" class="slider__container"></div>
       </section>
 
       <section class="newsletter l-newsletter">
@@ -76,10 +63,14 @@
               placeholder="Votre adresse mail"
               required
             />
-            <button class="button newsletter__button" type="submit">Envoyer</button>
+            <button class="button newsletter__button" type="submit">
+              Envoyer
+            </button>
           </fieldset>
         </form>
-        <p class="newsletter__legal">En vous inscrivant vous acceptez notre politique de confidentialité</p>
+        <p class="newsletter__legal">
+          En vous inscrivant vous acceptez notre politique de confidentialité
+        </p>
       </section>
     </main>
 
