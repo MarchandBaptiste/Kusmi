@@ -11,7 +11,8 @@
       "./assets/imgs/agrume6.webp"
     ],
     "description": "Un mélange pétillant de citron vert, d'orange et de pamplemousse, avec une pointe de citron amer qui donne du caractère.",
-    "theme": "Agrumes"
+    "theme": "agrumes",
+    "modelPaths": "./assets/models/originalglb.glb"
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
       "./assets/imgs/fleurie6.webp"
     ],
     "description": "Un mélange envoûtant de jasmin et de fleur d'oranger, avec une pointe de douceur miellée qui apporte de l'élégance.",
-    "theme": "Fleuries"
+    "theme": "fleuries",
+    "modelPaths": "./assets/models/fleurie.glb"
   },
   {
     "id": 3,
@@ -39,6 +41,7 @@
       "./assets/imgs/sucre6.webp"
     ],
     "description": "Un mélange envoûtant de vanille et de caramel, avec une pointe de chaleur sucrée qui apporte de la gourmandise.",
-    "theme": "Sucrees"
+    "theme": "sucrees",
+    "modelPaths": "./assets/models/sucre.glb"
   }
 ]

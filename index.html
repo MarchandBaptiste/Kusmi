@@ -10,8 +10,15 @@
     />
     <link rel="stylesheet" href="./assets/style/css/main.css" />
     <link rel="icon" type="image/png" href="./assets/icons/logo.png" />
+    <style>
+      #three-container {
+        width: 100%;
+        height: 400px;
+        background-color: #237541;
+      }
+    </style>
     <script type="module" src="./assets/js/main.js"></script>
-    <script src="./assets/js/animations.js"></script>
+    <script type="module" src="./assets/js/animations.js"></script>
     <meta
       name="description"
       content="Rafraîchissez-vous avec le nouveau soda Kusmi. Un mélange pétillant unique de citron vert, orange, pamplemousse et plantes pour une pause stimulante."
@@ -29,6 +36,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div id="three-container"></div>
     </header>
 
     <main>
@@ -44,8 +52,18 @@
 
       <section class="slider l-slider">
         <div id="slider__container" class="slider__container"></div>
-        <button class="slider__btn slider__btn--prev" aria-label="Image précédente">‹</button>
-        <button class="slider__btn slider__btn--next" aria-label="Image suivante">›</button>
+        <button
+          class="slider__btn slider__btn--prev"
+          aria-label="Image précédente"
+        >
+          ←
+        </button>
+        <button
+          class="slider__btn slider__btn--next"
+          aria-label="Image suivante"
+        >
+          →
+        </button>
       </section>
 
       <section class="newsletter l-newsletter">
@@ -118,13 +136,19 @@
             <h2 class="footer__title">Nos canettes</h2>
             <ul class="footer__list">
               <li class="footer__item">
-                <a class="footer__link" href="#">Agrumes</a>
+                <a class="footer__link" href="#" data-flavor="agrumes"
+                  >Agrumes</a
+                >
               </li>
               <li class="footer__item">
-                <a class="footer__link" href="#">Fleuries</a>
+                <a class="footer__link" href="#" data-flavor="fleuries"
+                  >Fleuries</a
+                >
               </li>
               <li class="footer__item">
-                <a class="footer__link" href="#">Sucrées</a>
+                <a class="footer__link" href="#" data-flavor="sucrees"
+                  >Sucrées</a
+                >
               </li>
             </ul>
           </div>

@@ -1,14 +1,19 @@
 @use "../abstracts/index" as v;
 @use "../mixins/index" as m;
+@use "sass:map";
 
 .l-footer {
   padding-top: 5rem;
   position: relative;
-  background-image: url("../../icons/fondFooter.svg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   color: v.$color-darck-green;
+}
+@each $name, $theme in v.$themes {
+  body.#{$name} .l-footer {
+    background-image: map.get($theme, "footer");
+  }
 }
 
 $icons: (

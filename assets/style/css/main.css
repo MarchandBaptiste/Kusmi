@@ -24,14 +24,42 @@ body {
   background-color: #1e2922;
 }
 
+::selection {
+  color: #fffcf4;
+}
+
+body.agrumes::selection {
+  background: #F5C144;
+}
+
+body.fleuries::selection {
+  background: #99B98A;
+}
+
+body.sucrees::selection {
+  background: #BEA580;
+}
+
 .button {
   width: 100%;
   border: none;
   padding: 1rem;
-  background-color: #f5c144;
   color: #1e2922;
   font-family: "Felxas", sans-serif;
   border-radius: 30px;
+  cursor: pointer;
+}
+
+body.agrumes .button {
+  background-color: #F5C144;
+}
+
+body.fleuries .button {
+  background-color: #99B98A;
+}
+
+body.sucrees .button {
+  background-color: #BEA580;
 }
 
 .button:hover {
@@ -162,11 +190,22 @@ body {
 .l-footer {
   padding-top: 5rem;
   position: relative;
-  background-image: url("../../icons/fondFooter.svg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   color: #1e2922;
+}
+
+body.agrumes .l-footer {
+  background-image: url("../../icons/agrumeFooter.svg");
+}
+
+body.fleuries .l-footer {
+  background-image: url("../../icons/fleurieFooter.svg");
+}
+
+body.sucrees .l-footer {
+  background-image: url("../../icons/sucreeFooter.svg");
 }
 
 .footer__content {
