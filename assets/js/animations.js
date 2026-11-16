@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const flavorURL = "./assets/data/flavors.json";
   const container = document.getElementById("slider__container");
+  const btnPrev = document.querySelector(".slider__btn--prev");
+  const btnNext = document.querySelector(".slider__btn--next");
+  const scrollStep = 240; // largeur image (200px) + gap (20px) + marge
   let flavorsData = [];
 
   // Render slider
@@ -39,4 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Erreur chargement saveurs:", err);
       container.innerHTML = `<p class="empty-message">Impossible de charger les images.</p>`;
     });
+
+  // Boutons carrousel desktop
+  btnPrev.addEventListener("click", () => {
+    container.scrollBy({ left: -scrollStep, behavior: "smooth" });
+  });
+
+  btnNext.addEventListener("click", () => {
+    container.scrollBy({ left: scrollStep, behavior: "smooth" });
+  });
 });
