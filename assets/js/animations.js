@@ -1,22 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
   const flavorURL = "./assets/data/flavors.json";
+  const body = document.querySelector("body");
   const container = document.getElementById("slider__container");
   const btnPrev = document.querySelector(".slider__btn--prev");
   const btnNext = document.querySelector(".slider__btn--next");
   const scrollStep = 240; // largeur image (200px) + gap (20px) + marge
+  const links = document.querySelectorAll("[data-flavor]");
   let flavorsData = [];
 
   // Render slider
   function renderImgSlider(list) {
+    const flavor = flavorsData.find((item) => item.flavor === list);
     container.innerHTML = "";
-
-    if (!list || list.length === 0) {
-      container.innerHTML = `<p class="empty-message">Aucun projet à afficher.</p>`;
-      return;
+    if (goutTrouve) {
+      if (!list || list.length === 0) {
+        container.innerHTML = `<p class="empty-message">Aucune images à afficher.</p>`;
+        return;
+      }
+    } else {
+      console.warn(`Le goût "${choix}" est introuvable dans flavorsData.`);
     }
 
     list.forEach((flavor) => {
-      // flavor.images est un tableau : on boucle sur chaque image
       flavor.images.forEach((imgSrc) => {
         const img = document.createElement("img");
         img.src = imgSrc;
@@ -27,6 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+  function changerFlavor(flavor) {
+    body.classList.remove(agrumes, fleuries, sucrees);
+    body.classList.add(flavor);
+  }
+
+  // Changement de gout
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); // empeche le rechargement
+      const flavor = link.getAttribute("data-flavor");
+      console.log("Goût sélectionné :", flavor);
+      changerFlavor(flavor);
+      renderImgSlider(flavor);
+    });
+  });
 
   // Chargement JSON
   fetch(flavorURL)
@@ -36,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((data) => {
       flavorsData = data;
-      renderImgSlider(flavorsData);
     })
     .catch((err) => {
       console.error("Erreur chargement saveurs:", err);
