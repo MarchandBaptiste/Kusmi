@@ -18,3 +18,12 @@ a {
 body {
   background-color: v.$color-darck-green;
 }
+
+::selection {
+  @each $name, $theme in v.$themes {
+    &--#{$name} {
+      background: map.get($theme, couleur-accent);
+    }
+  }
+  color: v.$color-white;
+}
