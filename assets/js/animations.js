@@ -69,6 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((data) => {
       flavorsData = data;
+      body.classList.add("agrumes");
+      renderImgSlider("agrumes");
+      const cheminModele = modelPaths["agrumes"];
+      if (cheminModele) {
+        chargerModeleGLB(cheminModele);
+      }
     })
     .catch((err) => {
       console.error("Erreur chargement saveurs:", err);
