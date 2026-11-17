@@ -11,7 +11,7 @@
 }
 @each $name, $theme in v.$themes {
   body.#{$name} .l-header {
-    background-color: map.get($theme, "couleur-accent");
+    background: map.get($theme, "gradiant");
   }
 }
 

@@ -30,15 +30,15 @@ body {
 }
 
 body.agrumes::selection {
-  background: #F5C144;
+  background: #f5c144;
 }
 
 body.fleuries::selection {
-  background: #99B98A;
+  background: #99b98a;
 }
 
 body.sucrees::selection {
-  background: #BEA580;
+  background: #bea580;
 }
 
 .button {
@@ -52,15 +52,15 @@ body.sucrees::selection {
 }
 
 body.agrumes .button {
-  background-color: #F5C144;
+  background-color: #f5c144;
 }
 
 body.fleuries .button {
-  background-color: #99B98A;
+  background-color: #99b98a;
 }
 
 body.sucrees .button {
-  background-color: #BEA580;
+  background-color: #bea580;
 }
 
 .button:hover {
@@ -191,15 +191,15 @@ body.sucrees .button {
 }
 
 body.agrumes .l-header {
-  background-color: #F5C144;
+  background: radial-gradient(ellipse 60% 70% at 5% 90%, #FDAA1C 10%, transparent 90%), radial-gradient(ellipse 200% 150% at 0% 0%, #FA5618 5%, transparent 60%), radial-gradient(ellipse 140% 150% at 100% 40%, #e98354 3%, transparent 100%);
 }
 
 body.fleuries .l-header {
-  background-color: #99B98A;
+  background: radial-gradient(ellipse 100% 30% at 30% 5%, #FEE2C2 10%, transparent 90%), radial-gradient(ellipse 450% 400% at 100% 7%, #A7C096 5%, transparent 60%), radial-gradient(ellipse 80% 40% at 30% 100%, #EBE7B5 3%, transparent 100%);
 }
 
 body.sucrees .l-header {
-  background-color: #BEA580;
+  background: radial-gradient(ellipse 100% 70% at 5% 20%, #E79C22 10%, transparent 90%), radial-gradient(ellipse 200% 100% at 100% 0%, #FEF8E0 30%, transparent 80%), radial-gradient(ellipse 440% 450% at 30% 90%, #C1A982 3%, transparent 90%);
 }
 
 .header {
@@ -255,13 +255,13 @@ body.sucrees .l-header {
   background-color: #1e2922;
 }
 body.agrumes .header__cta {
-  color: #F5C144;
+  color: #f5c144;
 }
 body.fleuries .header__cta {
-  color: #99B98A;
+  color: #99b98a;
 }
 body.sucrees .header__cta {
-  color: #BEA580;
+  color: #bea580;
 }
 
 .l-newsletter {
@@ -286,15 +286,15 @@ body.sucrees .header__cta {
 }
 
 body.agrumes .l-footer {
-  background-color: #F5C144;
+  background-color: #f5c144;
 }
 
 body.fleuries .l-footer {
-  background-color: #99B98A;
+  background-color: #99b98a;
 }
 
 body.sucrees .l-footer {
-  background-color: #BEA580;
+  background-color: #bea580;
 }
 
 .footer__content {
