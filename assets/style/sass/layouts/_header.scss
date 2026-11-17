@@ -4,7 +4,10 @@
 
 .l-header {
   clip-path: url(#vague-header);
-  height: 750px;
+  height: 800px;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 @each $name, $theme in v.$themes {
   body.#{$name} .l-header {

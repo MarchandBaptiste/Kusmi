@@ -184,7 +184,10 @@ body.sucrees .button {
 
 .l-header {
   clip-path: url(#vague-header);
-  height: 750px;
+  height: 800px;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 body.agrumes .l-header {
