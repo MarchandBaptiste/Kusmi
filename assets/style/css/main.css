@@ -110,6 +110,9 @@ body.sucrees .button {
   padding: 0 2rem;
   text-align: center;
 }
+.newsletter__button:hover {
+  color: #fffcf4;
+}
 
 .slider {
   position: relative;
