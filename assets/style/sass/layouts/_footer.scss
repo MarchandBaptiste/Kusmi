@@ -9,10 +9,13 @@
   background-position: top;
   background-size: cover;
   color: v.$color-darck-green;
+  width: 100%;
+  height: 28rem;
+  clip-path: url(#vague-clip);
 }
 @each $name, $theme in v.$themes {
   body.#{$name} .l-footer {
-    background-image: map.get($theme, "footer");
+    background-color: map.get($theme, "couleur-accent");
   }
 }
 

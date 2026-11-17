@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const flavorURL = "./assets/data/flavors.json";
   const body = document.querySelector("body");
   const container = document.getElementById("slider__container");
-  const footer = document.querySelector(".l-footer");
   const btnPrev = document.querySelector(".slider__btn--prev");
   const btnNext = document.querySelector(".slider__btn--next");
   const scrollStep = 240; // largeur image + gap + marge
@@ -43,13 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     body.classList.add(flavor);
   }
 
-  // Changer le fond SVG du footer
-  function changerFooterBg(bgUrl) {
-    if (footer) {
-      footer.style.backgroundImage = `url("${bgUrl}")`;
-    }
-  }
-
   // Changement de goût au clic
   links.forEach((link) => {
     link.addEventListener("click", (e) => {
@@ -61,21 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn(`Le goût "${flavor}" est introuvable.`);
         return;
       }
-
-      // 1. Couleur du body
       changerFlavor(flavor);
-
-      // 2. Images du slider
       renderImgSlider(flavor);
-
-      // 3. Modèle 3D
       if (flavorObj.modelPaths) {
         chargerModeleGLB(flavorObj.modelPaths);
-      }
-
-      // 4. Fond SVG du footer
-      if (flavorObj.footerBg) {
-        changerFooterBg(flavorObj.footerBg);
       }
     });
   });
@@ -89,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       flavorsData = data;
 
-      // Initialisation par défaut : Agrumes
+      // Initialisation par défaut Agrumes
       body.classList.add("agrumes");
       const defaultFlavor = flavorsData.find(
         (item) => item.theme === "agrumes",
@@ -98,9 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderImgSlider("agrumes");
         if (defaultFlavor.modelPaths) {
           chargerModeleGLB(defaultFlavor.modelPaths);
-        }
-        if (defaultFlavor.footerBg) {
-          changerFooterBg(defaultFlavor.footerBg);
         }
       }
     })
