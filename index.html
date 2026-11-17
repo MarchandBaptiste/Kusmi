@@ -10,13 +10,6 @@
     />
     <link rel="stylesheet" href="./assets/style/css/main.css" />
     <link rel="icon" type="image/png" href="./assets/icons/logo.png" />
-    <style>
-      #three-container {
-        width: 100%;
-        height: 400px;
-        background-color: #237541;
-      }
-    </style>
     <script type="module" src="./assets/js/main.js"></script>
     <script type="module" src="./assets/js/animations.js"></script>
     <meta
@@ -26,17 +19,35 @@
   </head>
 
   <body>
-    <header>
-      <h1>Kusmi</h1>
-      <nav>
-        <ul>
-          <li><a href="#section1">Lien 1</a></li>
-          <li><a href="#section2">Lien 2</a></li>
-          <li><a href="#section3">Lien 3</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div id="three-container"></div>
+    <header class="header l-header">
+      <div class="header__logo-group">
+        <img
+          src="./assets/icons/logoKumsi.webp"
+          alt="Logo Kusmi"
+          class="header__logo"
+        />
+        <p class="header__subtitle">La gamme</p>
+      </div>
+      <div class="header__info">
+        <p class="header__slogan">Pétillant. Tout simplement.</p>
+        <p class="header__flavor"></p>
+      </div>
+      <div class="header__cards">
+        <article class="header__card" data-flavor="agrumes">
+          <button class="header__btn">Découvrir les agrumes</button>
+        </article>
+
+        <article class="header__card" data-flavor="fleuries">
+          <button class="header__btn">Découvrir les fleuries</button>
+        </article>
+
+        <article class="header__card" data-flavor="sucrees">
+          <button class="header__btn">Découvrir les sucrées</button>
+        </article>
+      </div>
+      <div id="three-container" class="header__3d"></div>
+      <button class="header__cta">Découvrir les agrumes ↓</button>
+      <p class="header__scroll">Glissez pour découvrir</p>
     </header>
 
     <main>
