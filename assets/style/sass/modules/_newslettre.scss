@@ -44,4 +44,7 @@
     padding: 0 v.$spacer-lg;
     text-align: center;
   }
+  &__button:hover{
+    color: v.$color-white;
+  }
 }
