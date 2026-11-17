@@ -14,12 +14,7 @@
 
 .header {
   color: v.$color-darck-green;
-  @include m.flex(
-    $direction: column,
-    $justify: space-between,
-    $align: center,
-    $gap: 2rem
-  );
+  @include m.flex($direction: column, $align: center, $gap: v.$spacer);
   &__logo {
     width: 20%;
     height: auto;
@@ -30,16 +25,21 @@
   &__logo-group {
     @include m.flex($direction: row, $justify: space-between, $align: center);
     padding: v.$spacer;
+    width: 100%;
   }
   &__info {
     padding: 0 v.$spacer-lg 0 v.$spacer-lg;
+    width: 98%;
   }
   &__scroll {
     font-size: 0.7rem;
     text-align: center;
   }
   &__cta {
-    width: 30%;
+    width: 85%;
+    @include m.respond-to("lg") {
+      width: 25%;
+    }
     border: none;
     padding: v.$spacer;
     font-family: v.$secondary-font;

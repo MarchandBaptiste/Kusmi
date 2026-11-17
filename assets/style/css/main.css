@@ -203,10 +203,10 @@ body.sucrees .l-header {
   color: #1e2922;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 .header__logo {
   width: 20%;
@@ -224,16 +224,25 @@ body.sucrees .l-header {
   align-items: center;
   flex-wrap: nowrap;
   padding: 1rem;
+  width: 100%;
 }
 .header__info {
   padding: 0 2rem 0 2rem;
+  width: 98%;
 }
 .header__scroll {
   font-size: 0.7rem;
   text-align: center;
 }
 .header__cta {
-  width: 30%;
+  width: 85%;
+}
+@media screen and (min-width: 1024px) {
+  .header__cta {
+    width: 25%;
+  }
+}
+.header__cta {
   border: none;
   padding: 1rem;
   font-family: "Felxas", sans-serif;
