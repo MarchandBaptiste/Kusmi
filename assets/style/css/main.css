@@ -22,6 +22,7 @@ a {
 
 body {
   background-color: #1e2922;
+  font-family: "Felxas", sans-serif;
 }
 
 ::selection {
@@ -29,15 +30,15 @@ body {
 }
 
 body.agrumes::selection {
-  background: #F5C144;
+  background: #f5c144;
 }
 
 body.fleuries::selection {
-  background: #99B98A;
+  background: #99b98a;
 }
 
 body.sucrees::selection {
-  background: #BEA580;
+  background: #bea580;
 }
 
 .button {
@@ -51,15 +52,15 @@ body.sucrees::selection {
 }
 
 body.agrumes .button {
-  background-color: #F5C144;
+  background-color: #f5c144;
 }
 
 body.fleuries .button {
-  background-color: #99B98A;
+  background-color: #99b98a;
 }
 
 body.sucrees .button {
-  background-color: #BEA580;
+  background-color: #bea580;
 }
 
 .button:hover {
@@ -166,6 +167,11 @@ body.sucrees .button {
   display: none;
   border-radius: 9999px;
 }
+@media screen and (min-width: 1024px) {
+  .slider__btn {
+    display: block;
+  }
+}
 .slider__btn:hover {
   background-color: rgba(0, 0, 0, 0.37);
 }
@@ -175,10 +181,91 @@ body.sucrees .button {
 .slider__btn--next {
   right: 0;
 }
-@media (min-width: 1024px) {
-  .slider__btn {
-    display: block;
+
+.l-header {
+  clip-path: url(#vague-header);
+  height: 950px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+body.agrumes .l-header {
+  background: radial-gradient(ellipse 60% 70% at 5% 90%, #FDAA1C 10%, transparent 90%), radial-gradient(ellipse 200% 150% at 0% 0%, #FA5618 5%, transparent 60%), radial-gradient(ellipse 140% 150% at 100% 40%, #e98354 3%, transparent 100%);
+}
+
+body.fleuries .l-header {
+  background: radial-gradient(ellipse 100% 30% at 30% 5%, #FEE2C2 10%, transparent 90%), radial-gradient(ellipse 450% 400% at 100% 7%, #A7C096 5%, transparent 60%), radial-gradient(ellipse 80% 40% at 30% 100%, #EBE7B5 3%, transparent 100%);
+}
+
+body.sucrees .l-header {
+  background: radial-gradient(ellipse 100% 70% at 5% 20%, #E79C22 10%, transparent 90%), radial-gradient(ellipse 200% 100% at 100% 0%, #FEF8E0 30%, transparent 80%), radial-gradient(ellipse 440% 450% at 30% 90%, #C1A982 3%, transparent 90%);
+}
+
+.header {
+  color: #1e2922;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.header__logo {
+  width: 20%;
+  height: auto;
+}
+@media screen and (min-width: 1024px) {
+  .header__logo {
+    width: 10%;
   }
+}
+.header__logo-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  width: 100%;
+}
+.header__info {
+  padding: 0 2rem 0 2rem;
+  width: 98%;
+}
+.header__flavor {
+  font-size: 2.2rem;
+}
+.header__scroll {
+  font-size: 0.7rem;
+  text-align: center;
+}
+.header__cta {
+  width: 85%;
+}
+@media screen and (min-width: 1024px) {
+  .header__cta {
+    width: 25%;
+  }
+}
+.header__cta {
+  border: none;
+  padding: 1rem;
+  font-family: "Felxas", sans-serif;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #1e2922;
+}
+body.agrumes .header__cta {
+  color: #f5c144;
+}
+body.fleuries .header__cta {
+  color: #99b98a;
+}
+body.sucrees .header__cta {
+  color: #bea580;
 }
 
 .l-newsletter {
@@ -203,15 +290,15 @@ body.sucrees .button {
 }
 
 body.agrumes .l-footer {
-  background-color: #F5C144;
+  background-color: #f5c144;
 }
 
 body.fleuries .l-footer {
-  background-color: #99B98A;
+  background-color: #99b98a;
 }
 
 body.sucrees .l-footer {
-  background-color: #BEA580;
+  background-color: #bea580;
 }
 
 .footer__content {
@@ -252,7 +339,6 @@ body.sucrees .l-footer {
 }
 .footer__item {
   color: #fffcf4;
-  font-family: "Felxas", sans-serif;
   font-size: 1rem;
   padding-bottom: 0.5rem;
 }

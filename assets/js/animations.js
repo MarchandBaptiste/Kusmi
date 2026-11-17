@@ -10,6 +10,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("[data-flavor]");
   let flavorsData = [];
 
+  function renderHeaderFlavor(flavorName) {
+    const headerFlavor = document.getElementById("header__flavor");
+    headerFlavor.innerHTML = "";
+    if (!flavorsData || flavorsData.length === 0) {
+      headerFlavor.innerHTML = `<p class="empty-message">Aucune donnée chargée.</p>`;
+      return;
+    }
+    const flavor = flavorsData.find((item) => item.theme === flavorName);
+
+    if (!flavor) {
+      console.warn(`Le goût "${flavorName}" est introuvable.`);
+      return;
+    }
+    const title = document.createElement("h1");
+    title.textContent = flavor.flavor + ".";
+    headerFlavor.appendChild(title);
+  }
+
   // Render slider pour une saveur donnée
   function renderImgSlider(flavorName) {
     container.innerHTML = "";
@@ -22,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const flavor = flavorsData.find((item) => item.theme === flavorName);
 
     if (!flavor) {
-      console.warn(`Le goût "${flavorName}" est introuvable dans flavorsData.`);
+      console.warn(`Le goût "${flavorName}" est introuvable.`);
       return;
     }
 
@@ -55,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       changerFlavor(flavor);
       renderImgSlider(flavor);
+      renderHeaderFlavor(flavor);
       if (flavorObj.modelPaths) {
         chargerModeleGLB(flavorObj.modelPaths);
       }
@@ -77,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       if (defaultFlavor) {
         renderImgSlider("agrumes");
+        renderHeaderFlavor("agrumes");
         if (defaultFlavor.modelPaths) {
           chargerModeleGLB(defaultFlavor.modelPaths);
         }

@@ -10,13 +10,6 @@
     />
     <link rel="stylesheet" href="./assets/style/css/main.css" />
     <link rel="icon" type="image/png" href="./assets/icons/logo.png" />
-    <style>
-      #three-container {
-        width: 100%;
-        height: 400px;
-        background-color: #237541;
-      }
-    </style>
     <script type="module" src="./assets/js/main.js"></script>
     <script type="module" src="./assets/js/animations.js"></script>
     <meta
@@ -26,18 +19,47 @@
   </head>
 
   <body>
-    <header>
-      <h1>Kusmi</h1>
-      <nav>
-        <ul>
-          <li><a href="#section1">Lien 1</a></li>
-          <li><a href="#section2">Lien 2</a></li>
-          <li><a href="#section3">Lien 3</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div id="three-container"></div>
+    <header class="header l-header">
+      <div class="header__logo-group">
+        <img
+          src="./assets/icons/logoKumsi.webp"
+          alt="Logo Kusmi"
+          class="header__logo"
+        />
+        <p class="header__subtitle">La gamme</p>
+      </div>
+      <div class="header__info">
+        <p class="header__slogan">Pétillant. Tout simplement.</p>
+        <div id="header__flavor" class="header__flavor"></div>
+      </div>
+      <div class="header__cards">
+        <article class="header__card" data-flavor="agrumes">
+          <button class="header__btn">Découvrir les agrumes</button>
+        </article>
+
+        <article class="header__card" data-flavor="fleuries">
+          <button class="header__btn">Découvrir les fleuries</button>
+        </article>
+
+        <article class="header__card" data-flavor="sucrees">
+          <button class="header__btn">Découvrir les sucrées</button>
+        </article>
+      </div>
+      <div id="three-container" class="header__3d"></div>
+      <a class="header__cta">Découvrir les agrumes ↓</a>
+      <p class="header__scroll">Glissez pour découvrir</p>
     </header>
+    <svg width="0" height="0" viewBox="0 0 1 1">
+      <defs>
+        <clipPath id="vague-header" clipPathUnits="objectBoundingBox">
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            d="M0,0 H1 V0.883 C1,0.883 0.877,0.923 0.859,0.928 C0.79,0.95 0.759,0.869 0.693,0.862 C0.628,0.856 0.564,1.05 0.519,0.988 C0.472,0.924 0.36,0.848 0.273,0.862 C0.187,0.877 0.205,0.998 0.117,0.988 C0.047,0.98 0,0.883 0,0.883 V0 Z"
+            shape-rendering="crispEdges"
+          />
+        </clipPath>
+      </defs>
+    </svg>
 
     <main>
       <section id="section1">
@@ -98,8 +120,9 @@
       <defs>
         <clipPath id="vague-clip" clipPathUnits="objectBoundingBox">
           <path
-            d="M 0 0.12 C 0.15 0, 0.35 0, 0.5 0.08 C 0.65 0.16, 0.85 0.08, 1 0.12 L 1 1 L 0 1 Z"
-          ></path>
+            xmlns="http://www.w3.org/2000/svg"
+            d="M1,1 H0 L0,0.086 C0,0.086 0.057,0.001 0.103,0.001 C0.172,0.001 0.241,0.058 0.307,0.065 C0.372,0.073 0.444,0.022 0.555,0.055 C0.708,0.101 0.721,0.072 0.752,0.065 C0.801,0.055 0.843,-0.01 0.93,0.001 C1,0.01 1,0.044 1,0.044 L1,1 Z"
+          />
         </clipPath>
       </defs>
     </svg>

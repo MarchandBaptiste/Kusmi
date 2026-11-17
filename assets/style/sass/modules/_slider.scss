@@ -53,6 +53,9 @@
     z-index: 10;
     display: none;
     border-radius: v.$border-radius-full;
+    @include m.respond-to("lg") {
+      display: block;
+    }
   }
 
   &__btn:hover {
@@ -65,11 +68,5 @@
 
   &__btn--next {
     right: 0;
-  }
-
-  @media (min-width: 1024px) {
-    &__btn {
-      display: block;
-    }
   }
 }
