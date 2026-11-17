@@ -184,7 +184,7 @@ body.sucrees .button {
 
 .l-header {
   clip-path: url(#vague-header);
-  height: 800px;
+  height: 950px;
   margin: 0;
   padding: 0;
   display: block;
@@ -204,6 +204,7 @@ body.sucrees .l-header {
 
 .header {
   color: #1e2922;
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -232,6 +233,9 @@ body.sucrees .l-header {
 .header__info {
   padding: 0 2rem 0 2rem;
   width: 98%;
+}
+.header__flavor {
+  font-size: 2.2rem;
 }
 .header__scroll {
   font-size: 0.7rem;

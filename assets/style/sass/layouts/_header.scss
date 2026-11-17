@@ -4,7 +4,7 @@
 
 .l-header {
   clip-path: url(#vague-header);
-  height: 800px;
+  height: 950px;
   margin: 0;
   padding: 0;
   display: block;
@@ -17,6 +17,7 @@
 
 .header {
   color: v.$color-darck-green;
+  text-transform: uppercase;
   @include m.flex($direction: column, $align: center, $gap: v.$spacer);
   &__logo {
     width: 20%;
@@ -33,6 +34,9 @@
   &__info {
     padding: 0 v.$spacer-lg 0 v.$spacer-lg;
     width: 98%;
+  }
+  &__flavor{
+    font-size: 2.2rem;
   }
   &__scroll {
     font-size: 0.7rem;
