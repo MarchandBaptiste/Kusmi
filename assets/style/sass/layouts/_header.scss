@@ -1,0 +1,56 @@
+@use "../abstracts/index" as v;
+@use "../mixins/index" as m;
+@use "sass:map";
+
+.l-header {
+  clip-path: url(#vague-header);
+  height: 750px;
+}
+@each $name, $theme in v.$themes {
+  body.#{$name} .l-header {
+    background-color: map.get($theme, "couleur-accent");
+  }
+}
+
+.header {
+  color: v.$color-darck-green;
+  @include m.flex(
+    $direction: column,
+    $justify: space-between,
+    $align: center,
+    $gap: 2rem
+  );
+  &__logo {
+    width: 20%;
+    height: auto;
+    @include m.respond-to("lg") {
+      width: 10%;
+    }
+  }
+  &__logo-group {
+    @include m.flex($direction: row, $justify: space-between, $align: center);
+    padding: v.$spacer;
+  }
+  &__info {
+    padding: 0 v.$spacer-lg 0 v.$spacer-lg;
+  }
+  &__scroll {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  &__cta {
+    width: 30%;
+    border: none;
+    padding: v.$spacer;
+    font-family: v.$secondary-font;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    background-color: v.$color-darck-green;
+  }
+  @each $name, $theme in v.$themes {
+    body.#{$name} &__cta {
+      color: map.get($theme, "couleur-accent");
+    }
+  }
+}
