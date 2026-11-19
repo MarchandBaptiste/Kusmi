@@ -1,0 +1,32 @@
+@use "../abstracts/index" as v;
+@use "../mixins/index" as m;
+
+.l-histoire {
+  color: v.$color-white;
+  @include m.flex(
+    $direction: column,
+    $justify: center,
+    $align: center,
+    $gap: v.$spacer-lg
+  );
+  padding: v.$spacer-lg;
+  @include m.respond-to("lg") {
+    padding: v.$spacer-lg 20% v.$spacer-lg 20%;
+  }
+}
+
+.histoire {
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: v.$spacer-lg;
+  }
+  &__subTitle {
+    text-transform: uppercase;
+    padding-bottom: v.$spacer;
+    font-size: v.$size-content;
+  }
+  &__separateur {
+    width: 100%;
+  }
+}
