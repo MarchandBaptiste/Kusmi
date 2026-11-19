@@ -41,6 +41,10 @@ body.sucrees::selection {
   background: #bea580;
 }
 
+body.basic::selection {
+  background: #F5C144;
+}
+
 .button {
   width: 100%;
   border: none;
@@ -61,6 +65,10 @@ body.fleuries .button {
 
 body.sucrees .button {
   background-color: #bea580;
+}
+
+body.basic .button {
+  background-color: #F5C144;
 }
 
 .button:hover {
@@ -191,15 +199,19 @@ body.sucrees .button {
 }
 
 body.agrumes .l-header {
-  background: radial-gradient(ellipse 60% 70% at 5% 90%, #FDAA1C 10%, transparent 90%), radial-gradient(ellipse 200% 150% at 0% 0%, #FA5618 5%, transparent 60%), radial-gradient(ellipse 140% 150% at 100% 40%, #e98354 3%, transparent 100%);
+  background: radial-gradient(ellipse 60% 70% at 5% 90%, #fdaa1c 10%, transparent 90%), radial-gradient(ellipse 200% 150% at 0% 0%, #fa5618 5%, transparent 60%), radial-gradient(ellipse 140% 150% at 100% 40%, #e98354 3%, transparent 100%);
 }
 
 body.fleuries .l-header {
-  background: radial-gradient(ellipse 100% 30% at 30% 5%, #FEE2C2 10%, transparent 90%), radial-gradient(ellipse 450% 400% at 100% 7%, #A7C096 5%, transparent 60%), radial-gradient(ellipse 80% 40% at 30% 100%, #EBE7B5 3%, transparent 100%);
+  background: radial-gradient(ellipse 100% 30% at 30% 5%, #fee2c2 10%, transparent 90%), radial-gradient(ellipse 450% 400% at 100% 7%, #a7c096 5%, transparent 60%), radial-gradient(ellipse 80% 40% at 30% 100%, #ebe7b5 3%, transparent 100%);
 }
 
 body.sucrees .l-header {
-  background: radial-gradient(ellipse 100% 70% at 5% 20%, #E79C22 10%, transparent 90%), radial-gradient(ellipse 200% 100% at 100% 0%, #FEF8E0 30%, transparent 80%), radial-gradient(ellipse 440% 450% at 30% 90%, #C1A982 3%, transparent 90%);
+  background: radial-gradient(ellipse 100% 70% at 5% 20%, #e79c22 10%, transparent 90%), radial-gradient(ellipse 200% 100% at 100% 0%, #fef8e0 30%, transparent 80%), radial-gradient(ellipse 440% 450% at 30% 90%, #c1a982 3%, transparent 90%);
+}
+
+body.basic .l-header {
+  background: radial-gradient(ellipse 100% 70% at 5% 20%, #FDA91D 10%, transparent 90%), radial-gradient(ellipse 200% 100% at 100% 0%, #FDEF32 30%, transparent 80%), radial-gradient(ellipse 440% 450% at 30% 90%, #FBC84A 3%, transparent 90%);
 }
 
 .header {
@@ -267,6 +279,9 @@ body.fleuries .header__cta {
 body.sucrees .header__cta {
   color: #bea580;
 }
+body.basic .header__cta {
+  color: #F5C144;
+}
 
 .l-newsletter {
   display: flex;
@@ -275,6 +290,36 @@ body.sucrees .header__cta {
   align-items: center;
   flex-wrap: nowrap;
   gap: 2rem;
+}
+
+.l-histoire {
+  color: #fffcf4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .l-histoire {
+    padding: 2rem 20% 2rem 20%;
+  }
+}
+
+.histoire__title {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem;
+}
+.histoire__subTitle {
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+.histoire__separateur {
+  width: 100%;
 }
 
 .l-footer {
@@ -299,6 +344,10 @@ body.fleuries .l-footer {
 
 body.sucrees .l-footer {
   background-color: #bea580;
+}
+
+body.basic .l-footer {
+  background-color: #F5C144;
 }
 
 .footer__content {
