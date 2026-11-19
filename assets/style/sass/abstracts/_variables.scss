@@ -10,16 +10,8 @@ $themes: (
   agrumes: (
     couleur-accent: #f5c144,
     gradiant: (
-      radial-gradient(
-        ellipse 60% 70% at 5% 90%,
-        #FDAA1C 10%,
-        transparent 90%
-      ),
-      radial-gradient(
-        ellipse 200% 150% at 00% 0%,
-        #FA5618 5%,
-        transparent 60%
-      ),
+      radial-gradient(ellipse 60% 70% at 5% 90%, #fdaa1c 10%, transparent 90%),
+      radial-gradient(ellipse 200% 150% at 00% 0%, #fa5618 5%, transparent 60%),
       radial-gradient(
         ellipse 140% 150% at 100% 40%,
         #e98354 3%,
@@ -30,19 +22,15 @@ $themes: (
   fleuries: (
     couleur-accent: #99b98a,
     gradiant: (
-      radial-gradient(
-        ellipse 100% 30% at 30% 5%,
-        #FEE2C2 10%,
-        transparent 90%
-      ),
+      radial-gradient(ellipse 100% 30% at 30% 5%, #fee2c2 10%, transparent 90%),
       radial-gradient(
         ellipse 450% 400% at 100% 7%,
-        #A7C096 5%,
+        #a7c096 5%,
         transparent 60%
       ),
       radial-gradient(
         ellipse 80% 40% at 30% 100%,
-        #EBE7B5 3%,
+        #ebe7b5 3%,
         transparent 100%
       ),
     ),
@@ -50,19 +38,31 @@ $themes: (
   sucrees: (
     couleur-accent: #bea580,
     gradiant: (
-      radial-gradient(
-        ellipse 100% 70% at 5% 20%,
-        #E79C22 10%,
-        transparent 90%
-      ),
+      radial-gradient(ellipse 100% 70% at 5% 20%, #e79c22 10%, transparent 90%),
       radial-gradient(
         ellipse 200% 100% at 100% 0%,
-        #FEF8E0 30%,
+        #fef8e0 30%,
         transparent 80%
       ),
       radial-gradient(
         ellipse 440% 450% at 30% 90%,
-        #C1A982 3%,
+        #c1a982 3%,
+        transparent 90%
+      ),
+    ),
+  ),
+  basic: (
+    couleur-accent: #F5C144,
+    gradiant: (
+      radial-gradient(ellipse 100% 70% at 5% 20%, #FDA91D 10%, transparent 90%),
+      radial-gradient(
+        ellipse 200% 100% at 100% 0%,
+        #FDEF32 30%,
+        transparent 80%
+      ),
+      radial-gradient(
+        ellipse 440% 450% at 30% 90%,
+        #FBC84A 3%,
         transparent 90%
       ),
     ),
