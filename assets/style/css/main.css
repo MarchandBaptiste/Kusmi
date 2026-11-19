@@ -292,6 +292,36 @@ body.basic .header__cta {
   gap: 2rem;
 }
 
+.l-histoire {
+  color: #fffcf4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .l-histoire {
+    padding: 2rem 20% 2rem 20%;
+  }
+}
+
+.histoire__title {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem;
+}
+.histoire__subTitle {
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+.histoire__separateur {
+  width: 100%;
+}
+
 .l-footer {
   padding-top: 5rem;
   position: relative;
