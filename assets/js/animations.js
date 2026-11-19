@@ -115,4 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
   btnNext.addEventListener("click", () => {
     container.scrollBy({ left: scrollStep, behavior: "smooth" });
   });
+  ddEventListener("click", () => {
+    container.scrollBy({ left: scrollStep, behavior: "smooth" });
+  });
+  initPartials();
 });
