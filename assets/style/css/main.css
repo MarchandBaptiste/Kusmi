@@ -258,6 +258,9 @@ body.basic .l-header {
   padding: 0 2rem 0 2rem;
   width: 98%;
 }
+.header__slogan {
+  font-weight: bold;
+}
 .header__flavor {
   font-size: 2.2rem;
   font-weight: 400;

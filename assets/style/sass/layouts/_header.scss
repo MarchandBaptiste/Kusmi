@@ -41,6 +41,9 @@
     padding: 0 v.$spacer-lg 0 v.$spacer-lg;
     width: 98%;
   }
+  &__slogan{
+    font-weight: bold;
+  }
   &__flavor {
     font-size: 2.2rem;
     font-weight: 400;
