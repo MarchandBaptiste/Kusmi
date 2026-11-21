@@ -66,8 +66,7 @@ $icons: (
     font-size: v.$size-content;
     padding-bottom: v.$spacer-sm;
   }
-  &__item:hover {
-    scale: 1.05;
+  &__link:hover {
     color: v.$color-darck-green;
   }
   &__list--social {

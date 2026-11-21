@@ -41,11 +41,14 @@
     padding: 0 v.$spacer-lg 0 v.$spacer-lg;
     width: 98%;
   }
-  &__slogan{
+  &__slogan {
     font-weight: bold;
   }
   &__flavor {
-    font-size: 2.2rem;
+    font-size: v.$size-title;
+    @include m.respond-to("lg") {
+      font-size: 2rem;
+    }
     font-weight: 400;
     font-synthesis: none;
     letter-spacing: 0.08em;
