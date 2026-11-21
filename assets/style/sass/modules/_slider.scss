@@ -5,11 +5,11 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: v.$spacer-lg 0 v.$spacer-lg v.$spacer-lg;
+  padding: v.$spacer-lg 0;
   overflow-x: hidden;
 
   &__container {
-    padding: v.$spacer-sm;
+    padding: v.$spacer-sm v.$spacer-lg;
     display: flex;
     align-items: center;
     gap: v.$spacer;
@@ -44,7 +44,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.212);
+    background-color: rgba(0, 0, 0, 0.2);
     color: v.$color-white;
     border: none;
     font-size: v.$spacer-lg;
@@ -59,14 +59,14 @@
   }
 
   &__btn:hover {
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &__btn--prev {
-    left: 0;
+    left: 5px;
   }
 
   &__btn--next {
-    right: 0;
+    right: 5px;
   }
 }

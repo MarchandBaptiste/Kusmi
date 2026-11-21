@@ -127,11 +127,11 @@ body.basic .button {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem 0;
   overflow-x: hidden;
 }
 .slider__container {
-  padding: 0.5rem;
+  padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -165,7 +165,7 @@ body.basic .button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.212);
+  background-color: rgba(0, 0, 0, 0.2);
   color: #fffcf4;
   border: none;
   font-size: 2rem;
@@ -181,13 +181,13 @@ body.basic .button {
   }
 }
 .slider__btn:hover {
-  background-color: rgba(0, 0, 0, 0.37);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .slider__btn--prev {
-  left: 0;
+  left: 5px;
 }
 .slider__btn--next {
-  right: 0;
+  right: 5px;
 }
 
 .l-header {
