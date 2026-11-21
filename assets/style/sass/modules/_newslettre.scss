@@ -7,7 +7,13 @@
   &__title {
     font-family: v.$primary-font;
     font-size: v.$size-title;
-    font-weight: 100;
+    font-weight: 400;
+    font-synthesis: none;
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase;
     margin-bottom: -1rem;
   }
   &__label {
@@ -19,14 +25,14 @@
       $justify: center,
       $align: center,
       $gap: v.$spacer
-      );
-      padding: v.$spacer-lg;
-      border: none;
+    );
+    padding: v.$spacer-lg;
+    border: none;
   }
-  &__legend{
-      text-align: center;
+  &__legend {
+    text-align: center;
   }
-  &__input{
+  &__input {
     border: 2px solid v.$color-white;
     border-radius: 8px;
     padding: v.$spacer;
@@ -34,17 +40,17 @@
     width: 100%;
     color: v.$color-white;
   }
-  &__input:focus{
+  &__input:focus {
     outline: none;
     box-shadow: 0 0 0 5px rgba($color: v.$color-white, $alpha: 0.08);
   }
-  &__legal{
+  &__legal {
     font-size: smaller;
     margin-top: -3.5rem;
     padding: 0 v.$spacer-lg;
     text-align: center;
   }
-  &__button:hover{
+  &__button:hover {
     color: v.$color-white;
   }
 }
