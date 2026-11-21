@@ -1,0 +1,43 @@
+@use "../abstracts/index" as v;
+@use "../mixins/index" as m;
+
+.l-rendu {
+  color: v.$color-white;
+  @include m.flex(
+    $direction: column,
+    $justify: center,
+    $align: center,
+    $gap: v.$spacer-lg
+  );
+  padding: v.$spacer-lg;
+  @include m.respond-to("lg") {
+    padding: v.$spacer-lg 20% v.$spacer-lg 20%;
+  }
+}
+
+.rendu {
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: v.$spacer-lg;
+  }
+  &__gallerie {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  &__img:nth-child(odd) {
+    justify-self: start;
+  }
+  &__img:nth-child(even) {
+    justify-self: end;
+  }
+  &__img {
+    width: 80%;
+    height: auto;
+    border-radius: v.$border-radius-lg;
+    @include m.respond-to("lg") {
+      width: 60%;
+    }
+  }
+}
