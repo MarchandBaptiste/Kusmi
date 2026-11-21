@@ -20,6 +20,12 @@
     text-transform: uppercase;
     text-align: center;
     padding: v.$spacer-lg;
+    font-weight: 100;
+    font-synthesis: none;
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   &__subTitle {
     text-transform: uppercase;

@@ -51,7 +51,12 @@ $icons: (
   }
   &__title {
     font-family: v.$primary-font;
-    font-weight: 100;
+    font-weight: 400;
+    font-synthesis: none;
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   &__list {
     list-style: none;

@@ -35,8 +35,14 @@
     padding: 0 v.$spacer-lg 0 v.$spacer-lg;
     width: 98%;
   }
-  &__flavor{
+  &__flavor {
     font-size: 2.2rem;
+    font-weight: 400;
+    font-synthesis: none;
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   &__scroll {
     font-size: 0.7rem;
