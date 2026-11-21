@@ -19,11 +19,17 @@
   color: v.$color-darck-green;
   text-transform: uppercase;
   @include m.flex($direction: column, $align: center, $gap: v.$spacer);
+  &__link {
+    display: inline-block;
+    width: fit-content;
+    flex-shrink: 0;
+  }
   &__logo {
-    width: 20%;
+    display: block;
+    width: 110px;
     height: auto;
     @include m.respond-to("lg") {
-      width: 10%;
+      width: 170px;
     }
   }
   &__logo-group {
@@ -35,8 +41,14 @@
     padding: 0 v.$spacer-lg 0 v.$spacer-lg;
     width: 98%;
   }
+  &__slogan {
+    font-weight: bold;
+  }
   &__flavor {
-    font-size: 2.2rem;
+    font-size: v.$size-title;
+    @include m.respond-to("lg") {
+      font-size: 2rem;
+    }
     font-weight: 400;
     font-synthesis: none;
     letter-spacing: 0.08em;
