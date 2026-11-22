@@ -312,6 +312,42 @@ body.basic .header__cta {
   color: #F5C144;
 }
 
+.l-description {
+  color: #fffcf4;
+  padding: 2rem;
+  text-align: center;
+}
+
+.description__steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+.description__step {
+  padding: 4rem;
+}
+.description__title {
+  font-family: "Flexas", sans-serif;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .description__title {
+    font-size: 2rem;
+  }
+}
+.description__title {
+  font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: 0.08em;
+  word-spacing: 0.15em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 1rem;
+}
+
 .l-newsletter {
   display: flex;
   flex-direction: column;
