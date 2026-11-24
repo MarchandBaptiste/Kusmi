@@ -22,6 +22,7 @@
   &__title {
     font-family: v.$primary-font;
     font-size: v.$size-title;
+    text-transform: uppercase;
     @include m.respond-to("lg") {
       font-size: 2rem;
     }

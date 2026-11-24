@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     const title = document.createElement("h1");
-    title.textContent = `${flavor.flavor}.`;
+    title.className = "description__title";
+    title.textContent = flavor.flavor;
     const descriptionText = document.createElement("p");
     descriptionText.textContent = flavor.description;
     descriptionContainer.append(title, descriptionText);
