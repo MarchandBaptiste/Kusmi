@@ -1,0 +1,37 @@
+@use "../abstracts/index" as v;
+@use "../mixins/index" as m;
+
+.l-description {
+  color: v.$color-white;
+  padding: v.$spacer-lg;
+  text-align: center;
+}
+
+.description {
+  &__steps {
+    @include m.flex(
+      $direction: column,
+      $justify: space-between,
+      $align: center,
+      $gap: 2rem
+    );
+  }
+  &__step {
+    padding: 4rem;
+  }
+  &__title {
+    font-family: v.$primary-font;
+    font-size: v.$size-title;
+    text-transform: uppercase;
+    @include m.respond-to("lg") {
+      font-size: 2rem;
+    }
+    font-weight: 400;
+    font-synthesis: none;
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-bottom: v.$spacer;
+  }
+}

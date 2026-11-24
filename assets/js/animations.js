@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body");
   const container = document.getElementById("slider__container");
   const headerFlavor = document.getElementById("header__flavor");
+  const descriptionContainer = document.getElementById("description__flavor");
   const btnPrev = document.querySelector(".slider__btn--prev");
   const btnNext = document.querySelector(".slider__btn--next");
   const scrollStep = 240; // largeur image + gap + marge
@@ -28,6 +29,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = document.createElement("h1");
     title.textContent = flavor.flavor + ".";
     headerFlavor.appendChild(title);
+  }
+
+  function renderDescription(flavorName) {
+    if (!descriptionContainer) return;
+
+    descriptionContainer.innerHTML = "";
+    if (!flavorsData || flavorsData.length === 0) {
+      descriptionContainer.innerHTML = `<p class="empty-message">Aucune donnée chargée.</p>`;
+      return;
+    }
+
+    const flavor = flavorsData.find((item) => item.theme === flavorName);
+    if (!flavor) {
+      console.warn(`Le goût "${flavorName}" est introuvable.`);
+      return;
+    }
+    const title = document.createElement("h1");
+    title.className = "description__title";
+    title.textContent = flavor.flavor;
+    const descriptionText = document.createElement("p");
+    descriptionText.textContent = flavor.description;
+    descriptionContainer.append(title, descriptionText);
   }
 
   // Render slider pour une saveur donnée
@@ -75,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     changerFlavor(flavorName);
     renderImgSlider(flavorName);
     renderHeaderFlavor(flavorName);
+    renderDescription(flavorName);
     if (flavorObj.modelPaths) {
       chargerModeleGLB(flavorObj.modelPaths);
     }
